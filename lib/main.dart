@@ -1,8 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:foodie_me/category_meals_screen.dart';
-import 'categories_screen.dart';
+import 'package:foodie_me/screens/category_meals_screen.dart';
+import 'screens/categories_screen.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -28,9 +28,10 @@ class MyApp extends StatelessWidget {
     )
       ),
       ),
-      home: CatergoriesScreen(),
+      //home: CatergoriesScreen(),
       routes: {
-        '/category-meals':(ctx) => CategoryMealsScreen(),
+         '/':(ctx) =>CatergoriesScreen(),
+        CategoryMealsScreen.routeName:(ctx) => CategoryMealsScreen(),
       },
     );
   }
