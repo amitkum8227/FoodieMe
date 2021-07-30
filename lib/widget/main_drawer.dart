@@ -42,7 +42,7 @@ class MainDrawer extends StatelessWidget {
           ),
           SizedBox(height: 20),
           buildListTile('Meals', Icons.restaurant, () {
-            Navigator.of(context).pushNamed('/');
+            Navigator.of(context).pushReplacementNamed('/');
             //print('heelo');
           }),
           buildListTile(
@@ -50,7 +50,8 @@ class MainDrawer extends StatelessWidget {
             Icons.settings,
             () {
               // Future.delayed(Duration(milliseconds: 5000)).then((_){
-              Navigator.of(context).pushNamed(FiltersScreen.routeName);
+              Navigator.of(context)
+                  .pushReplacementNamed(FiltersScreen.routeName);
               //print('heelo44');
             },
           ),
